@@ -486,6 +486,10 @@ function setMarkers() {
         });
         markedLocations.push(marker);
 
+        marker.addListener("hover", () => {
+            setTimeout(function () { infowindow.close(); }, 3000);
+        });
+
         marker.addListener("click", () => {
             infowindow.open(map, marker);
             map.setZoom(11);
@@ -577,7 +581,7 @@ function battleInfoDiv(battleTitle, startDate) {
         let lilEnemy = adversaries.toLowerCase();
         let eArranged = lilEnemy.replace(/ /g, '_');
         $("#enemy-flags").html("<img src='assets/flag_images/" + eArranged + ".png'></img>");
-    }a
+    }
     setTimeout(function () {
         window.scrollTo({
             top: document.body.scrollHeight,

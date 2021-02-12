@@ -56,7 +56,7 @@ h4 {
 }
 
 .init-page-container {
-    background: url("assets/flag_images/cemetery.png") no-repeat center center,
+    background: url("../flag_images/cemetery.png") no-repeat center center,
      linear-gradient(0deg, rgb(68, 44, 12) 7%, rgba(29, 15, 2, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
@@ -71,7 +71,7 @@ h4 {
 }
 
 .page-container {
-    background: url("assets/flag_images/cemetery.png") no-repeat center center,
+    background: url("../flag_images/cemetery.png") no-repeat center center,
      linear-gradient(0deg, rgb(31, 20, 5) 7%, rgba(68, 44, 12, 0.712) 15%, rgba(87, 45, 6, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
@@ -140,7 +140,7 @@ li img {
     font-family: 'Josefin Slab', sans-serif;
     text-decoration: none;
     color: rgb(29, 10, 10);
-    background: url("assets/flag_images/envelope.png") no-repeat left top;
+    background: url("../flag_images/envelope.png") no-repeat left top;
     background-size: cover;
     border-radius: 2px;
     width: 100px;
@@ -175,7 +175,7 @@ li img {
     min-width: calc(5vw + 50px);
     border-radius: 50%;
     /* margin: 3vw; */
-    background: url("assets/flag_images/globe.png"), rgba(189, 137, 60, 0.568);
+    background: url("../flag_images/globe.png"), rgba(189, 137, 60, 0.568);
     background-blend-mode: multiply;
     background-size: cover;
     color: whitesmoke;
@@ -317,7 +317,7 @@ li img {
 .banner {
     width: 110px;
     height: 45px;
-    background: url("assets/flag_images/banner.png") right bottom no-repeat;
+    background: url("../flag_images/banner.png") right bottom no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -364,7 +364,7 @@ li img {
       appearance: none;
       width: 130px;
       height: 70px;
-      background: url("assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
+      background: url("../cluster_images/mww2Aerial.png") no-repeat 0 -10px;
       background-size: cover;
       cursor: pointer;
       opacity: 1;
@@ -379,7 +379,7 @@ li img {
       appearance: none;
       width: 130px;
       height: 70px;
-      background: url("assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
+      background: url("../cluster_images/mww2Aerial.png") no-repeat 0 -10px;
       background-size: cover;
       cursor: pointer;
       opacity: 1;
@@ -468,7 +468,7 @@ li img {
 .flagpole {
     height: 100%;
     width: 17px;
-    background: url("assets/flag_images/flagpole2.png") no-repeat, linear-gradient(0deg, rgba(31, 20, 5, 0.986) 1%, rgba(31, 20, 5, 0.753) 2%, rgba(31, 20, 5, 0.397) 5%, rgba(31, 20, 5, 0) 100%);
+    background: url("../flag_images/flagpole2.png") no-repeat, linear-gradient(0deg, rgba(31, 20, 5, 0.986) 1%, rgba(31, 20, 5, 0.753) 2%, rgba(31, 20, 5, 0.397) 5%, rgba(31, 20, 5, 0) 100%);
     background-blend-mode: multiply;
 }
 
@@ -542,7 +542,7 @@ td {
 .feedback-container {
     width: 100vw;
     height: 100vh;
-    background: url("assets/flag_images/cemetery.png") no-repeat center center, #615843;
+    background: url("../flag_images/cemetery.png") no-repeat center center, #615843;
     background-blend-mode: multiply;
     background-size: cover;
     display: flex;
