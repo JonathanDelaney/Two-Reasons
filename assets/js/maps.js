@@ -535,7 +535,7 @@ function battleInfoDiv(battleTitle, startDate) {
         "<div class='fFlagsNpole'><div class='flagpole friendly-flagpole'></div><div class='flags fFlags' id='friendly-flags'></div></div>" +
         "<table class='infoBoxTable'>" +
         "<tr>" +
-        "<th colspan='2' class='battle-title'><a href='" + wikiLink + "' target='_blank'><img src='/assets/flag_images/wikipedia.png'><h1>" + battleTitle + "</h1></a></th>" +
+        "<th colspan='2' class='battle-title'><a href='" + wikiLink + "' target='_blank'><img src='assets/flag_images/wikipedia.png'><h1>" + battleTitle + "</h1></a></th>" +
         "</tr>" +
         "<tr>" +
         "<td>Start Date: " + startDate + "</td>" +
