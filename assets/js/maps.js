@@ -103,7 +103,7 @@ $(".ww2").click(function () {
 
 $(".ww1").mouseenter(
     function () {
-        if ($(this).hasClass("world-highloghted")) {
+        if ($(this).hasClass("world-highlighted")) {
             return;
         } else {
             $(this).addClass("ww-hover");
@@ -113,7 +113,7 @@ $(".ww1").mouseenter(
 
 $(".ww1").mouseleave(
     function () {
-        if ($(this).hasClass("world-highloghted")) {
+        if ($(this).hasClass("world-highlighted")) {
             return;
         } else {
             $(this).removeClass("ww-hover");
@@ -123,7 +123,7 @@ $(".ww1").mouseleave(
 
 $(".ww2").mouseenter(
     function () {
-        if ($(this).hasClass("world-highloghted")) {
+        if ($(this).hasClass("world-highlighted")) {
             return;
         } else {
             $(this).addClass("ww-hover");
@@ -133,7 +133,7 @@ $(".ww2").mouseenter(
 
 $(".ww2").mouseleave(
     function () {
-        if ($(this).hasClass("world-highloghted")) {
+        if ($(this).hasClass("world-highlighted")) {
             return;
         } else {
             $(this).removeClass("ww-hover");
