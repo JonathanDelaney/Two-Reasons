@@ -183,7 +183,7 @@ li img {
     font-family: 'Josephin Slab', sans-serif;
     font-weight: bold;
     transform: scale(1);
-    box-shadow: 0px 1.5vw 4vw white;
+    box-shadow: 0px 6px 10px white;
     filter: brightness(100%);
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
@@ -193,7 +193,7 @@ li img {
 }
 
 .ww:not(.world-highlighted):hover {
-    box-shadow: 0px 10vw 12vw white;
+    box-shadow: 0px 20px 40px white;
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
