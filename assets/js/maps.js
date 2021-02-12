@@ -487,6 +487,7 @@ function setMarkers() {
         markedLocations.push(marker);
 
         marker.addListener("hover", () => {
+            infowindow.open(map, marker);
             setTimeout(function () { infowindow.close(); }, 3000);
         });
 
@@ -514,7 +515,7 @@ function battleInfoDiv(battleTitle, startDate) {
     let adverseR;
     console.log($(".page-container").css('height'));
     if ($(".key").css('flex-wrap') == 'wrap') {
-        $(".page-container").css("height", "2000px");
+        $(".page-container").css("height", "2200px");
     } else {
         $(".page-container").css("height", "calc(140vh + 1200px)");
     }
