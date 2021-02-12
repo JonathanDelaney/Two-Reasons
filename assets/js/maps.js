@@ -436,9 +436,12 @@ function setMarkers() {
 
         marker.addListener("mouseover", () => {
             infowindow.open(map, marker);
-            setTimeout(function () { infowindow.close(); }, 3000);
         });
 
+        marker.addListener("mouseout", () => {
+            infowindow.close();
+        });
+        
         marker.addListener("click", () => {
             infowindow.open(map, marker);
             map.setZoom(11);
