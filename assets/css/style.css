@@ -9,11 +9,17 @@
 /* Page Background */
 
 h1 {
+    text-decoration: none;
     font-family: 'Special Elite', sans-serif;
     font-size: calc(2vw + 30px);
     color: rgb(58, 32, 27);
     margin: 20px 0px 0px;
     border-bottom: 2px rgb(37, 17, 37);
+}
+
+h1 a{
+    text-decoration: none;
+    color: rgb(58, 32, 27);
 }
 
 h2 {
@@ -50,7 +56,7 @@ h4 {
 }
 
 .init-page-container {
-    background: url("/assets/flag_images/cemetery.png") no-repeat center center,
+    background: url("assets/flag_images/cemetery.png") no-repeat center center,
      linear-gradient(0deg, rgb(68, 44, 12) 7%, rgba(29, 15, 2, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
@@ -65,7 +71,7 @@ h4 {
 }
 
 .page-container {
-    background: url("/assets/flag_images/cemetery.png") no-repeat center center,
+    background: url("assets/flag_images/cemetery.png") no-repeat center center,
      linear-gradient(0deg, rgb(31, 20, 5) 7%, rgba(68, 44, 12, 0.712) 15%, rgba(87, 45, 6, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
@@ -134,7 +140,7 @@ li img {
     font-family: 'Josefin Slab', sans-serif;
     text-decoration: none;
     color: rgb(29, 10, 10);
-    background: url("/assets/flag_images/envelope.png") no-repeat left top;
+    background: url("assets/flag_images/envelope.png") no-repeat left top;
     background-size: cover;
     border-radius: 2px;
     width: 100px;
@@ -142,7 +148,7 @@ li img {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4x 6px black;
+    box-shadow: 0px 3px 5px black;
     opacity: 0%;
     transform: scale(0);
     transition: opacity 2s ease, transform 1s ease-in-out;
@@ -169,7 +175,7 @@ li img {
     min-width: calc(5vw + 50px);
     border-radius: 50%;
     /* margin: 3vw; */
-    background: url("/assets/flag_images/globe.png"), rgba(189, 137, 60, 0.568);
+    background: url("assets/flag_images/globe.png"), rgba(189, 137, 60, 0.568);
     background-blend-mode: multiply;
     background-size: cover;
     color: whitesmoke;
@@ -311,7 +317,7 @@ li img {
 .banner {
     width: 110px;
     height: 45px;
-    background: url("/assets/flag_images/banner.png") right bottom no-repeat;
+    background: url("assets/flag_images/banner.png") right bottom no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -358,7 +364,7 @@ li img {
       appearance: none;
       width: 130px;
       height: 70px;
-      background: url("/assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
+      background: url("assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
       background-size: cover;
       cursor: pointer;
       opacity: 1;
@@ -373,7 +379,7 @@ li img {
       appearance: none;
       width: 130px;
       height: 70px;
-      background: url("/assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
+      background: url("assets/cluster_images/mww2Aerial.png") no-repeat 0 -10px;
       background-size: cover;
       cursor: pointer;
       opacity: 1;
@@ -462,7 +468,7 @@ li img {
 .flagpole {
     height: 100%;
     width: 17px;
-    background: url("/assets/flag_images/flagpole2.png") no-repeat, linear-gradient(0deg, rgba(31, 20, 5, 0.986) 1%, rgba(31, 20, 5, 0.753) 2%, rgba(31, 20, 5, 0.397) 5%, rgba(31, 20, 5, 0) 100%);
+    background: url("assets/flag_images/flagpole2.png") no-repeat, linear-gradient(0deg, rgba(31, 20, 5, 0.986) 1%, rgba(31, 20, 5, 0.753) 2%, rgba(31, 20, 5, 0.397) 5%, rgba(31, 20, 5, 0) 100%);
     background-blend-mode: multiply;
 }
 
@@ -500,17 +506,27 @@ th h1 {
 
 th, td {
     font-family: 'Josefin Slab', sans-serif;
-    color: white;
+    color: whitesmoke;
     margin-bottom: 15px;
-    border-bottom: 1px brown;
+}
+
+.battle-title {
+    height: 10px;
 }
 
 th a {
     text-decoration: none;
-    color: rgb(216, 180, 156);
+}
+
+th img {
+    position: absolute;
+    left: 20%;
+    width: 50px;
+    height: 50px;
 }
 
 td {
+    word-wrap: normal;
     width: 50%;
     text-align: center;
 }
@@ -526,7 +542,7 @@ td {
 .feedback-container {
     width: 100vw;
     height: 100vh;
-    background: url("/assets/flag_images/cemetery.png") no-repeat center center, #615843;
+    background: url("assets/flag_images/cemetery.png") no-repeat center center, #615843;
     background-blend-mode: multiply;
     background-size: cover;
     display: flex;
@@ -636,6 +652,15 @@ td {
         height: 70vh;
     }
 
+  .feedback-form {
+      width: 50%;
+  }
+
+  .form-control {
+      width: 50%;
+  }
+
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -696,6 +721,14 @@ td {
       visibility: collapse;
   }
 
+  #map {
+      height: 100vh;
+  }
+
+  #year {
+      margin-bottom: 60px;
+  }
+
   .contact-link {
     width: 41.6px;
     height: 23.5px;
@@ -731,4 +764,17 @@ td {
   th, td {
       max-width: 50%;
   }
+
+  th img {
+      left: 0px;
+  }
+
+  .feedback-form {
+      width: 90%;
+  }
+
+  .form-control {
+      width: 90%;
+  }
+
 }

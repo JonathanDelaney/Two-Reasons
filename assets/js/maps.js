@@ -475,7 +475,7 @@ function setMarkers() {
 
         const image =
         {
-            url: "/assets/cluster_images/m" + battleImageType + ".png",
+            url: "assets/cluster_images/m" + battleImageType + ".png",
             scaledSize: new google.maps.Size(40, 40),
         };
 
@@ -506,6 +506,8 @@ function battleInfoDiv(battleTitle, startDate) {
     const wikiLink = "https://en.wikipedia.org/wiki/" + titleLink;
     let alliesL;
     let adversL;
+    let alliesR;
+    let adverseR;
     console.log($(".page-container").css('height'));
     if ($(".key").css('flex-wrap') == 'wrap') {
         $(".page-container").css("height", "2000px");
@@ -516,30 +518,32 @@ function battleInfoDiv(battleTitle, startDate) {
     if (typeof allies == 'object') {
         let aLen = allies.length;
         aLen > 11 ? aLen = 11 : aLen;
-        alliesL = allies.slice(0, aLen);
+        alliesL = allies.slice(0, aLen).toString();
+        alliesR = alliesL.replace(/,/g, ', ');
     } else {
-        alliesL = allies;
+        alliesR = allies;
     }
     if (typeof adversaries == 'object') {
         let aLen = adversaries.length;
         aLen > 11 ? aLen = 11 : aLen;
-        adversL = adversaries.slice(0, aLen);
+        adversL = adversaries.slice(0, aLen).toString();
+        adverseR = adversL.replace(/,/g, ', ')
     } else {
-        adversL = adversaries;
+        adverseR = adversaries;
     }
     $("#battleInfoBox").html(
         "<div class='fFlagsNpole'><div class='flagpole friendly-flagpole'></div><div class='flags fFlags' id='friendly-flags'></div></div>" +
         "<table class='infoBoxTable'>" +
         "<tr>" +
-        "<th colspan='2'><a href='" + wikiLink + "' target='_blank'><h1>" + battleTitle + "</h1></a></th>" +
+        "<th colspan='2' class='battle-title'><a href='" + wikiLink + "' target='_blank'><img src='/assets/flag_images/wikipedia.png'><h1>" + battleTitle + "</h1></a></th>" +
         "</tr>" +
         "<tr>" +
         "<td>Start Date: " + startDate + "</td>" +
         "<td>End Date: " + endDate + "</td>" +
         "</tr>" +
         "<tr>" +
-        "<td>Allies: " + alliesL + "</td>" +
-        "<td>Antagonists: " + adversaries + "</td>" +
+        "<td>Allies: " + alliesR + "</td>" +
+        "<td>Antagonists: " + adverseR + "</td>" +
         "</tr>" +
         "<tr>" +
         "<th colspan='2'><p class='battle-description'>" + description + "</p></th>" +
@@ -555,25 +559,25 @@ function battleInfoDiv(battleTitle, startDate) {
         for (i = 0; i < aLen; i++) {
             let lilAllies = allies[i].toLowerCase();
             let aArranged = lilAllies.replace(/ /g, '_');
-            friendlyFlags.innerHTML += "<img src='/assets/flag_images/" + aArranged + ".png'></img>";
+            friendlyFlags.innerHTML += "<img src='assets/flag_images/" + aArranged + ".png'></img>";
         }
     } else {
         let lilAlly = allies.toLowerCase();
         let aArranged = lilAlly.replace(/ /g, '_');
-        $("#friendly-flags").html("<img src='/assets/flag_images/" + aArranged + ".png'></img>");
+        $("#friendly-flags").html("<img src='assets/flag_images/" + aArranged + ".png'></img>");
     }
     if (typeof adversaries == 'object') {
         let eLen = adversaries.length;
         for (i = 0; i < eLen; i++) {
             let lilEnemies = adversaries[i].toLowerCase();
             let eArranged = lilEnemies.replace(/ /g, '_');
-            enemyFlags.innerHTML += "<img src='/assets/flag_images/" + eArranged + ".png'></img>";
+            enemyFlags.innerHTML += "<img src='assets/flag_images/" + eArranged + ".png'></img>";
         }
     } else {
         let lilEnemy = adversaries.toLowerCase();
         let eArranged = lilEnemy.replace(/ /g, '_');
-        $("#enemy-flags").html("<img src='/assets/flag_images/" + eArranged + ".png'></img>");
-    }
+        $("#enemy-flags").html("<img src='assets/flag_images/" + eArranged + ".png'></img>");
+    }a
     setTimeout(function () {
         window.scrollTo({
             top: document.body.scrollHeight,
