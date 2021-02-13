@@ -83,6 +83,7 @@ $(".ww1").click(function () {
     }
     sliderMapChange();
     initContent();
+    insertAptKey("ww1");
 });
 
 $(".ww2").click(function () {
@@ -99,6 +100,7 @@ $(".ww2").click(function () {
     }
     sliderMapChange();
     initContent();
+    insertAptKey("ww2");
 });
 
 $(".ww1").mouseenter(
@@ -202,6 +204,25 @@ $("#slider").on('mousedown', function () {
 $("#slider").on('mouseup', function () {
     $("#slider").css('cursor', 'grab');
 });
+
+function insertAptKey(war) {
+        $(".insert > img").remove();
+    if (war == "ww1") {
+        console.log("ww1images");
+        $("<img src='assets/cluster_images/mGround.png'>").prependTo(".key-ground");
+        $("<img src='assets/cluster_images/mAerial.png'>").prependTo(".key-aerial");
+        $("<img src='assets/cluster_images/mNaval.png'>").prependTo(".key-naval");
+        $("<img src='assets/cluster_images/mBombing.png'>").prependTo(".key-bombing");
+        $("<img src='assets/cluster_images/mAerial-Ground-Naval.png'>").prependTo(".key-combo");
+    } else {
+        console.log("ww2images");
+        $("<img src='assets/cluster_images/mww2Ground.png'>").prependTo(".key-ground");
+        $("<img src='assets/cluster_images/mww2Aerial.png'>").prependTo(".key-aerial");
+        $("<img src='assets/cluster_images/mww2Naval.png'>").prependTo(".key-naval");
+        $("<img src='assets/cluster_images/mww2Bombing.png'>").prependTo(".key-bombing");
+        $("<img src='assets/cluster_images/mww2Aerial-Ground-Naval.png'>").prependTo(".key-combo");
+    }
+}
 
 
 function sliderMapChange() {
@@ -441,7 +462,7 @@ function setMarkers() {
         marker.addListener("mouseout", () => {
             infowindow.close();
         });
-        
+
         marker.addListener("click", () => {
             infowindow.open(map, marker);
             map.setZoom(11);
