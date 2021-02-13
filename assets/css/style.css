@@ -56,7 +56,7 @@ h4 {
 }
 
 .init-page-container {
-    background: url("../flag_images/cemetery.png") no-repeat center center,
+    background: url("../flag_images/field.png") no-repeat center center,
      linear-gradient(0deg, rgb(68, 44, 12) 7%, rgba(29, 15, 2, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
@@ -71,12 +71,12 @@ h4 {
 }
 
 .page-container {
-    background: url("../flag_images/cemetery.png") no-repeat center center,
+    background: url("../flag_images/field.png") no-repeat center center,
      linear-gradient(0deg, rgb(31, 20, 5) 7%, rgba(68, 44, 12, 0.712) 15%, rgba(87, 45, 6, 0.301) 100%);
     background-blend-mode: multiply;
     background-size: cover;
     width: 100vw;
-    height: 220vh;
+    height: 240vh;
     transition: height 1s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ h4 {
 .key {
     height: 400px;
     width: 100%;
-    margin-top: -100px;
+    margin-top: -50vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -123,12 +123,14 @@ li {
 }
 
 li img {
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     margin-right: 10px;
-    background:radial-gradient(circle, rgba(194, 187, 171, 0.76) 24%, rgba(196, 172, 172, 0.37) 54%, rgba(189, 137, 60, 0) 70%);
+    background: radial-gradient(circle, rgba(194, 187, 171, 0.76) 14%, rgba(196, 172, 172, 0.37) 54%, rgba(189, 137, 60, 0) 70%);
     border-radius: 2px;
     vertical-align: middle;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
 }
 
 .contact-link {
@@ -183,7 +185,7 @@ li img {
     font-family: 'Josephin Slab', sans-serif;
     font-weight: bold;
     transform: scale(1);
-    box-shadow: 0px 6px 20px white;
+    box-shadow: 0px 6px 30px white;
     filter: brightness(100%);
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
@@ -192,7 +194,7 @@ li img {
     text-decoration: none;
 }
 
-.ww-hover {
+.ww:not(.world-highlighted):hover {
     box-shadow: 0px 20px 40px white;
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -228,7 +230,7 @@ li img {
     transform-origin: top;
     transition: transform 1s ease-in;
     z-index: 1;
-    margin-top: -100px;
+    margin-top: -50vh;
 }
 
 .period-button {
@@ -408,7 +410,7 @@ li img {
     font-family: 'Special Elite', cursive;
     font-size: 35px;
     color: rgb(8, 8, 8);
-    bottom: -10%;
+    bottom: -36%;
     position: absolute;
     z-index: 2;
     margin: 0px 25% 15px;
@@ -418,7 +420,7 @@ li img {
 #map {
     top: 1%;
     left: 1.5%;
-    height: 700px;
+    height: 90vh;
     width: 97%;
     position: absolute;
     border-radius: 3px;
@@ -519,7 +521,7 @@ th a {
 }
 
 th img {
-    margin-left: -350px;
+    margin-left: -300px;
     width: 50px;
     height: 50px;
 }
@@ -541,7 +543,7 @@ td {
 .feedback-container {
     width: 100vw;
     height: 100vh;
-    background: url("../flag_images/cemetery.png") no-repeat center center, #615843;
+    background: url("../flag_images/field.png") no-repeat center center, #615843;
     background-blend-mode: multiply;
     background-size: cover;
     display: flex;
@@ -634,7 +636,7 @@ td {
 }
 
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 2000px) {
     .page-container {
         height: 2600px;
     }  
@@ -662,7 +664,33 @@ td {
 
 }
 
+
+@media only screen and (max-width: 1024px) {
+    .page-container {
+        height: 250vw;
+    }
+
+    .key {
+        margin-top: -120vw;
+    }
+
+    .map-button-container{
+        margin-top: -120vw;
+    }
+
+    #year {
+        bottom: -85%;
+    }
+
+}
+
+
 @media only screen and (max-width: 900px) {
+
+  .page-container{
+    height: 230vh;
+  }
+
   #overview {
     visibility: hidden;
   }
@@ -684,11 +712,11 @@ td {
 
 @media only screen and (max-width: 700px) {
   .init-page-container {
-      height: 100vh;
+      height: 120vh;
   }
 
   .page-container {
-      height: 1500px;
+      height: 480vw;
   }
 
   .intro p {
@@ -697,7 +725,7 @@ td {
   }
 
   .key {
-      margin-top: -100px;
+      margin-top: -85vw;
       flex-wrap: wrap;
   }
 
@@ -714,6 +742,15 @@ td {
   .key-table {
       order: 3;
       width: 100%;
+  }
+
+  li img {
+      height: 60px;
+      width: 60px;
+  }
+
+  .map-button-container {
+      margin-top: -50vw;
   }
 
   .pb1, .pb2 {
@@ -756,16 +793,12 @@ td {
     visibility: collapse;
   }
 
-  #battleInfoBox, tr, .battle-description {
-      max-width: 98vw;
+  #battleInfoBox {
+    margin-bottom: 50px;
   }
 
   th, td {
       max-width: 50%;
-  }
-
-  th img {
-      left: 0px;
   }
 
   .feedback-form {

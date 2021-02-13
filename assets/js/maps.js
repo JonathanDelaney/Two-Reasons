@@ -103,47 +103,6 @@ $(".ww2").click(function () {
     insertAptKey("ww2");
 });
 
-$(".ww1").mouseenter(
-    function () {
-        if ($(this).hasClass("world-highlighted")) {
-            return;
-        } else {
-            $(this).addClass("ww-hover");
-        }
-    }
-)
-
-$(".ww1").mouseleave(
-    function () {
-        if ($(this).hasClass("world-highlighted")) {
-            return;
-        } else {
-            $(this).removeClass("ww-hover");
-        }
-    }
-)
-
-$(".ww2").mouseenter(
-    function () {
-        if ($(this).hasClass("world-highlighted")) {
-            return;
-        } else {
-            $(this).addClass("ww-hover");
-        }
-    }
-)
-
-$(".ww2").mouseleave(
-    function () {
-        if ($(this).hasClass("world-highlighted")) {
-            return;
-        } else {
-            $(this).removeClass("ww-hover");
-        }
-    }
-)
-
-
 $("#day").click(function () {
     $("#slider").attr("step", dayStep);
     sliderMapChange();
@@ -485,11 +444,12 @@ function battleInfoDiv(battleTitle, startDate) {
     let adversL;
     let alliesR;
     let adverseR;
-    console.log($(".page-container").css('height'));
     if ($(".key").css('flex-wrap') == 'wrap') {
-        $(".page-container").css("height", "2200px");
+        $(".page-container").css("height", "650vw");
+        $(".key").css("margin-top", "-85vw");
+        $(".map-button-container").css("margin-top", "-50vw");
     } else {
-        $(".page-container").css("height", "calc(140vh + 1200px)");
+        $(".page-container").css("height", "calc(140vh + 1400px)");
     }
     $(".page-container").css("transition", "none");
     if (typeof allies == 'object') {
