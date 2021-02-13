@@ -460,6 +460,16 @@ let wws = [
         description: "The Battle of the Falkland Islands was a First World War naval action between the British Royal Navy and Imperial German Navy. The British, after their defeat at the Battle of Coronel on 1 November, sent a large force to track down and destroy the German cruiser squadron. The battle is commemorated every year on 8 December in the Falkland Islands as a public holiday."
     },
     {
+        battle: "Raid on Cuxhaven",
+        coords: { lat: 53.861111, lng: 8.694444 },
+        startDate: "12/25/1914",
+        endDate: "12/25/1914",
+        allies: "British Empire",
+        adversaries: "German Empire",
+        battleType: ["Aerial", "Bombing", "Naval"],
+        description: "The Raid on Cuxhaven was a British ship-based air-raid on the Imperial German Navy at Cuxhaven mounted on Christmas Day, 1914. Aircraft of the Royal Naval Air Service were carried to within striking distance by seaplane tenders of the Royal Navy, supported by both surface ships and submarines. The aircraft flew over the area and dropped bombs, damaging shore installations."
+    },
+    {
         battle: "Second Battle of Edea",
         coords: { lat: 3.8, lng: 10.133333 },
         startDate: "05/01/1915",
@@ -716,6 +726,16 @@ let wws = [
         endDate: "08/03/1915",
         allies: "Kingdom of Italy",
         adversaries: "Austro-Hungarian Empire",
+        battleType: "Ground",
+        description: "The Second Battle of the Isonzo was fought between the armies of the Kingdom of Italy and of Austria-Hungary in the Italian Front in World War I, between 18 July and 3 August 1915."
+    },
+    {
+        battle: "Fokker Scourge",
+        coords: { lat: 49.8, lng: 4.1 },
+        startDate: "07/02/1915",
+        endDate: "02/28/1916",
+        allies: ["British Empire", "France"],
+        adversaries: "German Empire",
         battleType: "Ground",
         description: "The Second Battle of the Isonzo was fought between the armies of the Kingdom of Italy and of Austria-Hungary in the Italian Front in World War I, between 18 July and 3 August 1915."
     },
@@ -1266,7 +1286,7 @@ let wws = [
         endDate: "04/19/1917",
         allies: "British Empire",
         adversaries: "Ottoman Empire",
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Second Battle of Gaza was fought between 17 and 19 April 1917, following the defeat of the Egyptian Expeditionary Force (EEF) at the First Battle of Gaza in March, during the Sinai and Palestine Campaign of the First World War. Gaza was defended by the strongly entrenched Ottoman Army garrison, which had been reinforced after the first battle by substantial forces."
     },
     {
@@ -1280,13 +1300,23 @@ let wws = [
         description: "The Battle of Istabulat was a part of the Samarrah Campaign during the First World War occurring when the British Empire attempted to further its strategic position after the capture of Baghdad from the Ottoman Empire."
     },
     {
+        battle: "Bloody April",
+        coords: { lat: 50.292, lng: 2.78 },
+        startDate: "04/09/1917",
+        endDate: "04/28/1917",
+        allies: "British Empire",
+        adversaries: "German Empire",
+        battleType: ["Aerial", "Bombing"],
+        description: "Bloody April was the British air support operation during the Battle of Arras during which particularly heavy casualties were suffered by the Royal Flying Corps at the hands of the German Luftstreitkräfte.The tactical, technological, and training differences between the two sides ensured the British suffered a casualty rate nearly four times as great as their opponents."
+    },
+    {
         battle: "Action of 4 May 1917",
         coords: { lat: 56, lng: 3 },
         startDate: "05/04/1917",
         endDate: "05/04/1917",
         allies: ["United Kingdom", "Australia"],
         adversaries: "German Empire",
-        battleType: "Naval",
+        battleType: ["Naval", "Aerial", "Bombing"],
         description: "The Action of 4 May 1917 was a naval and air engagement of the First World War in the North Sea. The action took place between the German Zeppelin LZ 92 (tactical name: L.43), several German submarines and a naval force led by the Australian light cruiser HMAS Sydney."
     },
     {
@@ -1296,7 +1326,7 @@ let wws = [
         endDate: "05/23/1917",
         allies: "British Empire",
         adversaries: "Ottoman Empire",
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Raid on the Beersheba to Hafir el Auja railway took place on 23 May 1917 after the Second Battle of Gaza and before the Battle of Beersheba during the Stalemate in Southern Palestine in the Sinai and Palestine Campaign of World War I."
     },
     {
@@ -1476,7 +1506,7 @@ let wws = [
         endDate: "11/07/1917",
         allies: "British Empire",
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Battle of Hareira and Sheria was fought on 6–7 November 1917 when the Egyptian Expeditionary Force attacked and captured the Yildirim Army Group's defensive systems protecting Hareira and Sheria in the centre of the Gaza to Beersheba line, during the Southern Palestine Offensive of the Sinai and Palestine Campaign in World War I."
     },
     {
@@ -1686,7 +1716,7 @@ let wws = [
         endDate: "04/02/1918",
         allies: ["British Empire", "Hejaz"],
         adversaries: ["German Empire", "Ottoman Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The First Transjordan attack on Amman and to their enemy as the First Battle of the Jordan[5] took place between 21 March and 2 April 1918, as a consequence of the successful Battle of Tell 'Asur which occurred after the Capture of Jericho in February and the Occupation of the Jordan Valley began, during the Sinai and Palestine Campaign of World War I."
     },
     {
@@ -1696,7 +1726,7 @@ let wws = [
         endDate: "03/31/1918",
         allies: ["British Empire", "Hejaz"],
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The First Battle of Amman was fought from 27 to 31 March 1918 during the First Transjordan attack on Amman of the Sinai and Palestine Campaign of the First World War. The 60th Division and the Anzac Mounted Division attacked the Ottoman garrison at Amman deep in enemy occupied territory, 48 kilometres (30 mi) from their front line, after capturing Es Salt and Shunet Nimrin."
     },
     {
@@ -1768,6 +1798,16 @@ let wws = [
         adversaries: "German Empire",
         battleType: "Ground",
         description: "The Battle of Château-Thierry was fought on 31 May 1918 and was one of the first actions of the American Expeditionary Forces (AEF) under General John J. 'Black Jack' Pershing. It was a battle in World War I as part of the Second Battle of the Marne, initially prompted by a German Spring Offensive."
+    },
+    {
+        battle: "Tondern raid",
+        coords: { lat: 54.933333, lng: 8.85 },
+        startDate: "07/19/1918",
+        endDate: "07/19/1918",
+        allies: "United Kingdom",
+        adversaries: "German Empire",
+        battleType: ["Aerial", "Naval", "Bombing"],
+        description: "The Tondern raid or Operation F.7, was a British bombing raid mounted by the Royal Navy and Royal Air Force against the Imperial German Navy airship base at Tønder, Denmark, then a part of Germany. The airships were used for the strategic bombing of Britain. It was the first attack in history by aircraft from an aircraft carrier."
     },
     {
         battle: "Battle of Amiens",
@@ -1860,6 +1900,16 @@ let wws = [
         description: "The Battle of Saint-Mihiel was a major World War I battle fought from 12–15 September 1918, involving the American Expeditionary Forces (AEF) and 110,000 French troops under the command of General John J. Pershing of the United States against German positions. The U.S. Army Air Service played a significant role in this action."
     },
     {
+        battle: "Third Transjordan attack",
+        coords: { lat: 32.132778, lng: 35.535278 },
+        startDate: "09/19/1918",
+        endDate: "09/25/1918",
+        allies: ["United States", "France"],
+        adversaries: ["German Empire", "Austro-Hungarian Empire"],
+        battleType: ["Ground", "Aerial", "Naval"],
+        description: "The Third Transjordan attack by Chaytor's Force, part of the British Empire's Egyptian Expeditionary Force, was against the Ottoman Empire's Fourth Army and other Yildirim Army Group units. These operations took place during the Battle of Nablus, part of the Battle of Megiddo which began on 19 September in the final months of the Sinai and Palestine Campaign of World War I."
+    },
+    {
         battle: "Battle of Épehy",
         coords: { lat: 50, lng: 3.116667 },
         startDate: "09/18/1918",
@@ -1886,7 +1936,7 @@ let wws = [
         endDate: "09/19/1918",
         allies: "British Empire",
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Battle of Tulkarm took place on 19 September 1918, beginning of the Battle of Sharon, which along with the Battle of Nablus formed the set piece Battle of Megiddo fought between 19 and 25 September in the last months of the Sinai and Palestine Campaign of the First World War."
     },
     {
@@ -1896,7 +1946,7 @@ let wws = [
         endDate: "09/20/1918",
         allies: "British Empire",
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Battle of Tabsor was fought on 19–20 September 1918 beginning the Battle of Sharon, which along with the Battle of Nablus formed the set piece Battle of Megiddo fought between 19 and 25 September in the last months of the Sinai and Palestine Campaign of the First World War."
     },
     {
@@ -1906,17 +1956,17 @@ let wws = [
         endDate: "09/25/1918",
         allies: ["British Empire", "France"],
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Battle of Sharon began the set piece Battle of Megiddo half a day before the Battle of Nablus, in which large formations engaged and responded to movements by the opposition in the last months of the Sinai and Palestine Campaign. The fighting took place over a wide area from the Mediterranean Sea east to the Rafat salient in the Judean Hills."
     },
     {
-        battle: "Battle of Nablus",
+        battle: "Battle of Nablus (1918)",
         coords: { lat: 32.220278, lng: 35.278889 },
         startDate: "09/19/1918",
         endDate: "09/25/1918",
         allies: ["British Empire", "Hejaz"],
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial"],
         description: "The Battle of Nablus took place during the set piece Battle of Megiddo between 19 and 25 September 1918 in the last months of the Sinai and Palestine Campaign of the First World War. Fighting took place in the Judean Hills where the British Empire's XX Corps attacked the Ottoman Empire's Yildirim Army Group's Seventh Army defending their line in front of Nablus."
     },
     {
@@ -1926,7 +1976,7 @@ let wws = [
         endDate: "09/20/1918",
         allies: "British Empire",
         adversaries: ["Ottoman Empire", "German Empire"],
-        battleType: "Ground",
+        battleType: ["Ground", "Aerial", "Bombing"],
         description: "The Capture of Jenin occurred on 20 September 1918, during the Battle of Sharon which together with the Battle of Nablus formed the set piece Battle of Megiddo fought between 19 and 25 September during the last months of the Sinai and Palestine Campaign of the First World War."
     },
     {

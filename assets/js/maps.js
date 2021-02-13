@@ -154,6 +154,9 @@ $(".period-button").click(function () {
 
 $("#slider").on('input', function () {
     sliderMapChange();
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".banner").offset().top
+    }, 500);
 });
 
 $("#slider").on('mousedown', function () {

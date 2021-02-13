@@ -126,7 +126,7 @@ li img {
     height: 80px;
     width: 80px;
     margin-right: 10px;
-    background: radial-gradient(circle, rgba(194, 187, 171, 0.76) 14%, rgba(196, 172, 172, 0.37) 54%, rgba(189, 137, 60, 0) 70%);
+    background: radial-gradient(circle, rgba(194, 187, 171, 0.5) 14%, rgba(196, 172, 172, 0.37) 34%, rgba(189, 137, 60, 0) 70%);
     border-radius: 2px;
     vertical-align: middle;
     transform: scale(0);
