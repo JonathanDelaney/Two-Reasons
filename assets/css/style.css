@@ -76,7 +76,7 @@ h4 {
     background-blend-mode: multiply;
     background-size: cover;
     width: 100vw;
-    height: 240vh;
+    height: 260vh;
     transition: height 1s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -129,8 +129,8 @@ li img {
     background: radial-gradient(circle, rgba(194, 187, 171, 0.76) 14%, rgba(196, 172, 172, 0.37) 54%, rgba(189, 137, 60, 0) 70%);
     border-radius: 2px;
     vertical-align: middle;
-    transform: scale(1);
-    transition: transform 0.4s ease-in-out;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
 }
 
 .contact-link {
@@ -410,10 +410,10 @@ li img {
     font-family: 'Special Elite', cursive;
     font-size: 35px;
     color: rgb(8, 8, 8);
-    bottom: -36%;
+    top: 85vh;
     position: absolute;
     z-index: 2;
-    margin: 0px 25% 15px;
+    margin: 0px 25%;
     width: 50%;
 }
 
@@ -431,7 +431,7 @@ li img {
   height: 175px;
   border-radius: 50%;
   width: 175px;
-  bottom: -35%;
+  bottom: -8%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   position: absolute;
 
@@ -638,19 +638,23 @@ td {
 
 @media only screen and (min-width: 2000px) {
     .page-container {
-        height: 2600px;
+        height: 2700px;
     }  
 
     .key {
-        margin-top: calc(-25vw - 50px);
+        margin-top: calc(-29vw - 88px);
     }
 
     .map-button-container {
-        margin-top: calc(-25vw - 50px);
+        margin-top: calc(-27vw - 200px);
     }
 
     #map {
         height: 70vh;
+    }
+
+    #year {
+        top: 60vh;
     }
 
     #overview {
@@ -683,11 +687,11 @@ td {
     }
 
     #overview {
-        bottom: -87%;
+        visibility: collapse;
     }
 
     #year {
-        bottom: -85%;
+        bottom: -520px;
     }
 
 }
@@ -713,7 +717,7 @@ td {
   }
 
     #year {
-        font-size: 20px;
+        bottom: -220px;
     }
 }
 
@@ -724,7 +728,7 @@ td {
   }
 
   .page-container {
-      height: 480vw;
+      height: 550vw;
   }
 
   .intro p {
@@ -770,7 +774,7 @@ td {
   }
 
   #year {
-      margin-bottom: 60px;
+      margin-bottom: 200px;
   }
 
   .contact-link {

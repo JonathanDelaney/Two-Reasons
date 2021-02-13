@@ -165,22 +165,25 @@ $("#slider").on('mouseup', function () {
 });
 
 function insertAptKey(war) {
-        $(".insert > img").remove();
+    $("li img").css("transform", "scale(0)");
+    console.log($("li img").css("transform"));
+    $(".insert > img").remove();
     if (war == "ww1") {
-        console.log("ww1images");
         $("<img src='assets/cluster_images/mGround.png'>").prependTo(".key-ground");
         $("<img src='assets/cluster_images/mAerial.png'>").prependTo(".key-aerial");
         $("<img src='assets/cluster_images/mNaval.png'>").prependTo(".key-naval");
         $("<img src='assets/cluster_images/mBombing.png'>").prependTo(".key-bombing");
         $("<img src='assets/cluster_images/mAerial-Ground-Naval.png'>").prependTo(".key-combo");
     } else {
-        console.log("ww2images");
         $("<img src='assets/cluster_images/mww2Ground.png'>").prependTo(".key-ground");
         $("<img src='assets/cluster_images/mww2Aerial.png'>").prependTo(".key-aerial");
         $("<img src='assets/cluster_images/mww2Naval.png'>").prependTo(".key-naval");
         $("<img src='assets/cluster_images/mww2Bombing.png'>").prependTo(".key-bombing");
         $("<img src='assets/cluster_images/mww2Aerial-Ground-Naval.png'>").prependTo(".key-combo");
     }
+    console.log($("li img").css("transform"));
+    $("li img").css("transform", "scale(1)");
+    console.log($("li img").css("transform"));
 }
 
 
@@ -445,7 +448,7 @@ function battleInfoDiv(battleTitle, startDate) {
     let alliesR;
     let adverseR;
     if ($(".key").css('flex-wrap') == 'wrap') {
-        $(".page-container").css("height", "650vw");
+        $(".page-container").css("height", "742vw");
         $(".key").css("margin-top", "-85vw");
         $(".map-button-container").css("margin-top", "-50vw");
     } else {
