@@ -431,7 +431,7 @@ li img {
   height: 175px;
   border-radius: 50%;
   width: 175px;
-  bottom: -5%;
+  bottom: -35%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   position: absolute;
 
@@ -653,6 +653,10 @@ td {
         height: 70vh;
     }
 
+    #overview {
+        bottom: -57%;
+    }
+
   .feedback-form {
       width: 50%;
   }
@@ -676,6 +680,10 @@ td {
 
     .map-button-container{
         margin-top: -120vw;
+    }
+
+    #overview {
+        bottom: -87%;
     }
 
     #year {
