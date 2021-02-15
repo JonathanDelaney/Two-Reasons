@@ -651,15 +651,15 @@ td {
 
 @media only screen and (min-width: 2000px) {
     .page-container {
-        height: 2700px;
+        height: 3100px;
     }  
 
     .key {
-        margin-top: calc(-29vw - 88px);
+        margin-top: calc(-29vw - 488px);
     }
 
     .map-button-container {
-        margin-top: calc(-27vw - 200px);
+        margin-top: calc(-27vw - 600px);
     }
 
     #map {

@@ -136,6 +136,7 @@ $("#wholeWar").click(function () {
     } else {
         $('.highlighted').removeClass('highlighted')
         $("#slider").css('filter', 'brightness(20%)');
+        $(".interval-dates").css('filter', 'brightness(20%)');
         $(this).addClass('highlighted');
     }
 });
@@ -149,6 +150,7 @@ $(".period-button").click(function () {
         $('.highlighted').removeClass('highlighted')
         $(this).addClass('highlighted');
         $("#slider").css('filter', 'brightness(100%)');
+        $(".interval-dates").css('filter', 'brightness(100%)');
     }
 });
 
