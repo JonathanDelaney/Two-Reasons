@@ -328,7 +328,7 @@ li img {
 }
 
 .banner h3 {
-    margin-bottom: -8px;
+    margin-bottom: -4px;
 }
 
 .start-date {
@@ -699,7 +699,7 @@ td {
     }
 
     .banner h3 {
-        margin-bottom: -11px;
+        margin-bottom: -4px;
     }
 
     #overview {
@@ -789,7 +789,7 @@ td {
   }
 
   .banner h3 {
-      margin-bottom: -13px;
+      margin-bottom: 0px;
   }
 
   .interval-dates {
@@ -848,4 +848,11 @@ td {
       width: 90%;
   }
 
+}
+
+@media only screen and (max-width: 450px) {
+    .banner h3 {
+        margin-bottom:  -18px;
+        font-size: 14px;
+    }
 }
