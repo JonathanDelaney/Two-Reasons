@@ -387,7 +387,7 @@ function setMarkers() {
         const battleTitle = wws.find(x => x.coords === location).battle;
 
         console.log(battleTitle)
-        
+
         let battleImageType;
         let battleImageSort;
         if (startDateMsec > ww2StartMsec) {
@@ -508,12 +508,12 @@ function battleInfoDiv(battleTitle, startDate) {
         for (i = 0; i < aLen; i++) {
             let lilAllies = allies[i].toLowerCase();
             let aArranged = lilAllies.replace(/ /g, '_');
-            friendlyFlags.innerHTML += "<img src='assets/flag_images/" + aArranged + ".png'></img>";
+            friendlyFlags.innerHTML += "<img src='assets/flag_images/" + aArranged + ".png' alt='allied flag'></img>";
         }
     } else {
         let lilAlly = allies.toLowerCase();
         let aArranged = lilAlly.replace(/ /g, '_');
-        $("#friendly-flags").html("<img src='assets/flag_images/" + aArranged + ".png'></img>");
+        $("#friendly-flags").html("<img src='assets/flag_images/" + aArranged + ".png' alt='enemy flag'></img>");
     }
     if (typeof adversaries == 'object') {
         let eLen = adversaries.length;
