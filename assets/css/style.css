@@ -691,7 +691,7 @@ td {
     }
 
     #year {
-        bottom: -520px;
+        top: 600px;
     }
 
 }
@@ -729,7 +729,7 @@ td {
 
   .page-container {
       height: 550vw;
-      max-height: 2500px;
+      max-height: 2000px;
   }
 
   .intro p {

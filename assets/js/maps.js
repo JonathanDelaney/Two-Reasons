@@ -451,7 +451,7 @@ function battleInfoDiv(battleTitle, startDate) {
     let alliesR;
     let adverseR;
     if ($(".key").css('flex-wrap') == 'wrap') {
-        $(".page-container").css("height", "742vw");
+        $(".page-container").css({"height": "742vw", "max-height": "2400px"});
         $(".key").css("margin-top", "-85vw");
         $(".map-button-container").css("margin-top", "-50vw");
     } else {
