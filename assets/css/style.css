@@ -405,8 +405,8 @@ li img {
    }
 
 #slider::-webkit-slider-runnable-track {
-    height: 0px;
-    margin-bottom: 70px;
+    height: 3px;
+    margin-top: -70px;
 }
 
 /*--------------------------------------------Map*/
