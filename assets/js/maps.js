@@ -180,6 +180,7 @@ function insertAptKey(war) {
         $("<img src='assets/cluster_images/mAerial-Ground-Naval.png'>").prependTo(".key-combo");
         $(".interval-dates").html("<h3>|</h3><h3>1915</h3><h3>|</h3><h3>1916</h3><h3>|</h3><h3>1917</h3><h3>|</h3><h3>1918</h3><h3>|</h3>");
         $(".interval-dates").css("margin-left", "7%");
+        $(".interval-dates").css("width", "90%");
     } else {
         $("<img src='assets/cluster_images/mww2Ground.png'>").prependTo(".key-ground");
         $("<img src='assets/cluster_images/mww2Aerial.png'>").prependTo(".key-aerial");
@@ -188,6 +189,7 @@ function insertAptKey(war) {
         $("<img src='assets/cluster_images/mww2Aerial-Ground-Naval.png'>").prependTo(".key-combo");
         $(".interval-dates").html("<h3>|</h3><h3>1940</h3><h3>|</h3><h3>1941</h3><h3>|</h3><h3>1942</h3><h3>|</h3><h3>1943</h3><h3>|</h3><h3>1944</h3><h3>|</h3>");
         $(".interval-dates").css("margin-left", "5%");
+        $(".interval-dates").css("width", "70%");
     }
     $("li img").css("transform", "scale(1)");
 }

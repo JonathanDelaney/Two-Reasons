@@ -3899,7 +3899,7 @@ let wws = [
         startDate: "05/25/1944",
         endDate: "05/27/1944",
         allies: ["Yugoslav Partisans", "Balkan Air Force"],
-        adversaries: ["Germany", "Independant State of Croatia", "Chetniks"],
+        adversaries: ["Germany", "Independent State of Croatia", "Chetniks"],
         victor: "a",
         battleType: ["Ground", "Aerial"],
         description: "Operation Rösselsprung (German: Unternehmen Rösselsprung, Knight's move) was a combined airborne and ground assault by the German XV Mountain Corps and collaborationist forces on the Supreme Headquarters of the Yugoslav Partisans located in the Bosnian town of Drvar in the Independent State of Croatia during World War II. The operation was launched on 25 May 1944."
