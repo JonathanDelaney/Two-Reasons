@@ -4663,4 +4663,15 @@ let wws = [
         battleType: "Political",
         description: "On August 28, the occupation of Japan led by the Supreme Commander for the Allied Powers began. The surrender ceremony was held aboard the United States Navy battleship USS Missouri, at which officials from the Japanese government signed the Japanese Instrument of Surrender, thereby ending the hostilities. Allied civilians and military personnel alike celebrated V-J Day."
     },
+    {
+        battle: "Auschwitz",
+        coords: { lat: 50.035833, lng: 19.178333 },
+        startDate: "01/05/1940",
+        endDate: "01/27/1945",
+        allies: "The Jewish People",
+        adversaries: "Germany",
+        victor: "e",
+        battleType: "Auschwitz",
+        description: "The Auschwitz concentration camp was a complex of over 40 concentration and extermination camps operated by Nazi Germany during World War II and the Holocaust. It consisted of Auschwitz I, the main camp in Oswiecim; II-Birkenau, a concentration and extermination camp with gas chambers; III-Monowitz, a labor camp for the chemical conglomerate IG Farben; and dozens of subcamps"
+    },
 ];

@@ -385,6 +385,9 @@ function setMarkers() {
         const startDateMsec = Date.parse(startDate) * (-1);
         let battleType = wws.find(x => x.coords === location).battleType;
         const battleTitle = wws.find(x => x.coords === location).battle;
+
+        console.log(battleTitle)
+        
         let battleImageType;
         let battleImageSort;
         if (startDateMsec > ww2StartMsec) {
