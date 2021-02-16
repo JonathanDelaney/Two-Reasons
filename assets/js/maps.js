@@ -60,7 +60,7 @@ let initContent = (function () {
             executed = true;
             $(".init-page-container").removeClass("init-page-container").addClass("page-container");
             $(".intro").css({ "height": "0px", "transform": "scale(0)", "opacity": "0%" });
-            $(".key").css({ "height": "400px", "transform": "scale(1)" });
+            $(".key").css({ "height": "800px", "transform": "scale(1)" });
             $(".map-button-container").css("visibility", "visible");
             $("#buttonsNMap").addClass("map-button-container").removeClass("init-map-button-container");
             $(".contact-link").css({ 'opacity': '100%', 'transform': 'scale(1)' })
@@ -459,11 +459,12 @@ function battleInfoDiv(battleTitle, startDate) {
     let alliesR;
     let adverseR;
     if ($(".key").css('flex-wrap') == 'wrap') {
+        // if ($(window).width() >=)
         $(".page-container").css({"height": "742vw", "max-height": "2400px"});
-        $(".key").css("margin-top", "-85vw");
+        $(".key").css("margin-top", "-45vw");
         $(".map-button-container").css("margin-top", "-50vw");
     } else {
-        $(".page-container").css("height", "calc(140vh + 1400px)");
+        $(".page-container").css("height", "calc(170vh + 1400px)");
     }
     $(".page-container").css("transition", "none");
     if (typeof allies == 'object') {
