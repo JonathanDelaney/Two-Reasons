@@ -377,7 +377,7 @@ li img {
    }
 
 #slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
+      -webkit-appearance: none !important;
       appearance: none;
       width: 130px;
       height: 70px;
@@ -392,7 +392,7 @@ li img {
    }
 
 #slider:hover::-webkit-slider-thumb {
-      -webkit-appearance: none;
+      -webkit-appearance: none !important;
       appearance: none;
       width: 130px;
       height: 70px;
