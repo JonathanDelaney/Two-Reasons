@@ -897,3 +897,10 @@ td {
       top: 90vh;
   }
 }
+
+@media only screen and (max-width: 340px) {
+
+    .init-page-container {
+        height: 110vh;
+    }
+}
