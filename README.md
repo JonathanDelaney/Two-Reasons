@@ -1,7 +1,7 @@
 <h1 align="center">Two Reasons</h1>
 
 Live website :arrow_down:<br>
-<a href="https://jonathandelaney.github.io/Two-Reasons/">![alt](./assets/flag_images/readme/responsive.png)</a>
+<a href="https://jonathandelaney.github.io/Two-Reasons/">![alt](./assets/flag_images/responsive.png)</a>
 
 ## About
 
