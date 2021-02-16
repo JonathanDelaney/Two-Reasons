@@ -149,6 +149,8 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 ### Performance Testing
 
+-My JavaScript passed using the jshint.com validator.
+
 <img src="./assets/flag_images/webtest.png" height="100px" />
 Testing of the webpage was carried out using <a href="https://www.webpagetest.org/">webpagetest.org</a>
 <br>

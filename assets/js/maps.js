@@ -52,7 +52,7 @@ let initContent = (function () {
             $(".key").css({ "height": "800px", "transform": "scale(1)" });
             $(".map-button-container").css("visibility", "visible");
             $("#buttonsNMap").addClass("map-button-container").removeClass("init-map-button-container");
-            $(".contact-link").css({ 'opacity': '100%', 'transform': 'scale(1)' })
+            $(".contact-link").css({ 'opacity': '100%', 'transform': 'scale(1)' });
             setTimeout(initMapWithMarkers, 1000);
         }
     };
@@ -70,7 +70,7 @@ $(".ww1").click(function () {
     if ($(".ww1").hasClass('world-highlighted')) {
         return;
     } else {
-        $(".ww2").removeClass('world-highlighted')
+        $(".ww2").removeClass('world-highlighted');
         $(".ww1").addClass('world-highlighted');
     }
     sliderMapChange();
@@ -87,7 +87,7 @@ $(".ww2").click(function () {
     if ($(".ww2").hasClass('world-highlighted')) {
         return;
     } else {
-        $(".ww1").removeClass('world-highlighted')
+        $(".ww1").removeClass('world-highlighted');
         $(".ww2").addClass('world-highlighted');
     }
     sliderMapChange();
@@ -129,7 +129,7 @@ $("#wholeWar").click(function () {
     if ($(this).hasClass('highlighted')) {
         return;
     } else {
-        $('.highlighted').removeClass('highlighted')
+        $('.highlighted').removeClass('highlighted');
         $("#slider").css('filter', 'brightness(20%)');
         $(".interval-dates").css('filter', 'brightness(20%)');
         $(this).addClass('highlighted');
@@ -142,7 +142,7 @@ $(".period-button").click(function () {
     if (clicked.hasClass('highlighted')) {
         return;
     } else {
-        $('.highlighted').removeClass('highlighted')
+        $('.highlighted').removeClass('highlighted');
         $(this).addClass('highlighted');
         $("#slider").css('filter', 'brightness(100%)');
         $(".interval-dates").css('filter', 'brightness(100%)');
@@ -267,7 +267,7 @@ function sliderMapChange() {
     map.setZoom(2.47);
 
     locations = [];
-};
+}
 
 
 //////////// Button ReCentering Map
@@ -452,7 +452,7 @@ function setMarkers() {
         marker.addListener("click", () => {
             infowindow.open(map, marker);
             map.setZoom(11);
-            map.setCenter(marker.getPosition())
+            map.setCenter(marker.getPosition());
             battleInfoDiv(battleTitle, startDate);
             setTimeout(function () { infowindow.close(); }, 3000);
         });

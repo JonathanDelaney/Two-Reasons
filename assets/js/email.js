@@ -15,10 +15,10 @@ function sendMail(contactForm) {
             },
             function (error) {
                 inputFields.reset();
-                alert("Sorry, it failed to send! Please Retry.") // Sends Failure Message
+                alert("Sorry, it failed to send! Please Retry."); // Sends Failure Message
             });
     return false;
-};
+}
 
  ///////////////// Success Message
 function successMessage () {
