@@ -105,6 +105,9 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 ## Testing
 
+- The Reponsiveness of the page is determined by some JavaScript so if the viewport is changed midway through use of the webpage the responsiveness will be off. I tried to get around using JS in this way but with the height of the main page changing on click I couldn't think of another way around it.
+    - This is a note to anybody testing out the website to use the viewport you want to test from the outset.
+
 ### User experience
 
 - Friends and Family
@@ -148,8 +151,6 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 <img src="./assets/flag_images/webtest.png" height="100px" />
 Testing of the webpage was carried out using <a href="https://www.webpagetest.org/">webpagetest.org</a>
-<br>
-The images had to be compressed alot, however i changed one problematic image to png and this worked a lot better. In future i may stick to png.
 <br>
 <br>
 The CSS validating was done using <a href="https://jigsaw.w3.org/css-validator/">W3</a><br>

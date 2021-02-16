@@ -1,8 +1,13 @@
+//////////// Interval Constants
+
 const dayStep = 86400000;
 const weekStep = 604800000;
 const monthStep = 2654848607;
 const tmonthStep = 7964545823;
 const smonthStep = 15929091646;
+
+
+//////////// War Date Constants & Variables
 
 const ww1StartMsec = 1749252879000;
 const ww1LengthMsec = 143361824814;
@@ -11,42 +16,26 @@ const ww2LengthMsec = 207132291646;
 let sliderStartMsec;
 let wwLengthMsec;
 
+
+//////////// Map Constants & Variables
+
 let overview;
 let map;
 let markedLocations = [];
 const OVERVIEW_DIFFERENCE = 5;
 const OVERVIEW_MIN_ZOOM = 1;
 const OVERVIEW_MAX_ZOOM = 3.5;
-
 let mapCenter = { lat: 28, lng: 12 };
 let locations = [];
+
+
+//////////// Slider Variables
+
 let slider = document.getElementById("slider");
 let year = document.getElementById("year");
 
-let filteredWws = [];
-let wwsLength = wws.length;
-let scount = 0;
-let count = [];
 
-function wwsFilter() {
-    for (i = 0; i < wwsLength; i++) {
-        let currentUn = wws[i].allies;
-        scount += 1;
-        if (typeof currentUn == 'object') {
-            for (j = 0; j < currentUn.length; j++) {
-                if (count.indexOf(currentUn[j]) === -1) {
-                    count.push(currentUn[j]);
-                }
-            }
-        } else {
-            count.push(currentUn);
-        }
-    }
-    console.log(scount);
-    console.log(count);
-    console.log([... new Set(count)]);
-}
-
+//////////// Map & Page Initialisation
 
 function initMapWithMarkers() {
     initMap();
@@ -68,6 +57,9 @@ let initContent = (function () {
         }
     };
 })();
+
+
+//////////// World War Globes
 
 $(".ww1").click(function () {
     $("#startHeading").html("<h3>1914</h3>");
@@ -102,6 +94,9 @@ $(".ww2").click(function () {
     initContent();
     insertAptKey("ww2");
 });
+
+
+//////////// Interval Buttons
 
 $("#day").click(function () {
     $("#slider").attr("step", dayStep);
@@ -154,6 +149,9 @@ $(".period-button").click(function () {
     }
 });
 
+
+//////////// Slider Actions
+
 $("#slider").on('input', function () {
     sliderMapChange();
 });
@@ -168,6 +166,9 @@ $("#slider").on('mousedown', function () {
 $("#slider").on('mouseup', function () {
     $("#slider").css('cursor', 'grab');
 });
+
+
+//////////// Key Togggle
 
 function insertAptKey(war) {
     $("li img").css("transform", "scale(0)");
@@ -195,6 +196,8 @@ function insertAptKey(war) {
 }
 
 
+//////////// Map Rendering on Slider Input
+
 function sliderMapChange() {
     let sliderDif = parseInt(slider.value);
     let dateShown = (sliderStartMsec - sliderDif) * (-1);
@@ -202,6 +205,8 @@ function sliderMapChange() {
     let longDateStr = JSON.stringify(longDate);
     let shortDate = longDateStr.slice(1, 11);
     year.textContent = shortDate;
+
+    //////////// Loop to Select Which Battles to Plot
 
     if ($("#slider").attr("step") == dayStep) {
         for (i = 0; i < wws.length; i++) {
@@ -255,7 +260,7 @@ function sliderMapChange() {
         }
     }
 
-    // initMap();
+    //////////// Removes Current Markers, Sets New Markers Down, Centers Map, Then Empties Array For Next Run
     removeMarkers();
     setMarkers();
     map.setCenter(mapCenter);
@@ -264,8 +269,11 @@ function sliderMapChange() {
     locations = [];
 };
 
+
+//////////// Button ReCentering Map
+
 function CenterControl(controlDiv, map) {
-    // Set CSS for the control border.
+    // Sets CSS for the control border.
     const controlUI = document.createElement("div");
     controlUI.style.backgroundColor = "#fff";
     controlUI.style.border = "2px solid #fff";
@@ -276,7 +284,7 @@ function CenterControl(controlDiv, map) {
     controlUI.style.textAlign = "center";
     controlUI.title = "Click to recenter the map";
     controlDiv.appendChild(controlUI);
-    // Set CSS for the control interior.
+    // Sets CSS for the control interior.
     const controlText = document.createElement("div");
     controlText.style.color = "rgb(25,25,25)";
     controlText.style.fontFamily = "Roboto,Arial,sans-serif";
@@ -286,12 +294,15 @@ function CenterControl(controlDiv, map) {
     controlText.style.paddingRight = "5px";
     controlText.innerHTML = "Center Map";
     controlUI.appendChild(controlText);
-    // Setup the click event listeners: simply set the map to Chicago.
+    // Sets the click event listener to Center
     controlUI.addEventListener("click", () => {
         map.setCenter(mapCenter);
         map.setZoom(2.47);
     });
 }
+
+
+//////////// Function to Initialise Map
 
 function initMap() {
     const styledMapType = new google.maps.StyledMapType(
@@ -364,6 +375,8 @@ function initMap() {
 }
 
 
+//////////// Remove All Markers
+
 function removeMarkers() {
 
     (markerRemoval = function () {
@@ -375,23 +388,22 @@ function removeMarkers() {
     markedLocations = [];
 }
 
-function closeInfoWindow() {
 
-}
+//////////// Place Markers Down
 
 function setMarkers() {
 
     let markers = locations.map(function (location, i) {
 
+        //////////// Extracting Data from Relevant Object
         const startDate = wws.find(x => x.coords === location).startDate;
         const startDateMsec = Date.parse(startDate) * (-1);
         let battleType = wws.find(x => x.coords === location).battleType;
         const battleTitle = wws.find(x => x.coords === location).battle;
-
-        console.log(battleTitle)
-
         let battleImageType;
         let battleImageSort;
+
+        //////////// Sorting Battle Titles Into Usable Strings
         if (startDateMsec > ww2StartMsec) {
             if (typeof battleType == 'string') {
                 battleImageType = battleType;
@@ -428,6 +440,7 @@ function setMarkers() {
         });
         markedLocations.push(marker);
 
+        //////////// Marker Events
         marker.addListener("mouseover", () => {
             infowindow.open(map, marker);
         });
@@ -447,7 +460,13 @@ function setMarkers() {
     });
 }
 
+
+
+//////////// Battle Info Box Creator
+
 function battleInfoDiv(battleTitle, startDate) {
+
+    //////////// Extracting More Data from Relevant Object
     const endDate = wws.find(x => x.battle === battleTitle).endDate;
     const description = wws.find(x => x.battle === battleTitle).description;
     const allies = wws.find(x => x.battle === battleTitle).allies;
@@ -458,8 +477,9 @@ function battleInfoDiv(battleTitle, startDate) {
     let adversL;
     let alliesR;
     let adverseR;
+
+    //////////// Changing Screen Height Property Depending on Current Screen Layout
     if ($(".key").css('flex-wrap') == 'wrap') {
-        // if ($(window).width() >=)
         $(".page-container").css({"height": "742vw", "max-height": "2400px"});
         $(".key").css("margin-top", "-45vw");
         $(".map-button-container").css("margin-top", "-50vw");
@@ -467,6 +487,8 @@ function battleInfoDiv(battleTitle, startDate) {
         $(".page-container").css("height", "calc(170vh + 1400px)");
     }
     $(".page-container").css("transition", "none");
+
+    //////////// Preparing Ally And Adversary Strings
     if (typeof allies == 'object') {
         let aLen = allies.length;
         aLen > 11 ? aLen = 11 : aLen;
@@ -483,6 +505,8 @@ function battleInfoDiv(battleTitle, startDate) {
     } else {
         adverseR = adversaries;
     }
+
+    //////////// Loading A Table With All The Battle Info
     $("#battleInfoBox").html(
         "<div class='fFlagsNpole'><div class='flagpole friendly-flagpole'></div><div class='flags fFlags' id='friendly-flags'></div></div>" +
         "<table class='infoBoxTable'>" +
@@ -503,6 +527,8 @@ function battleInfoDiv(battleTitle, startDate) {
         "</table>" +
         "<div class='eFlagsNpole'><div class='flags eFlags' id='enemy-flags'></div><div class='flagpole enemy-flagpole'></div></div>"
     );
+
+    //////////// Calling Flag Images for Each of the Allies And Adversaries
     let enemyFlags = document.getElementById("enemy-flags");
     let friendlyFlags = document.getElementById("friendly-flags");
     if (typeof allies == 'object') {
@@ -530,6 +556,8 @@ function battleInfoDiv(battleTitle, startDate) {
         let eArranged = lilEnemy.replace(/ /g, '_');
         $("#enemy-flags").html("<img src='assets/flag_images/" + eArranged + ".png'></img>");
     }
+
+    //////////// Auto Scroll to Info Box
     setTimeout(function () {
         window.scrollTo({
             top: document.body.scrollHeight,
