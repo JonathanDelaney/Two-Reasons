@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Sans&family=Roboto:ital@1&family=Special+Elite&display=swap');
 
 *{
     padding: 0;
@@ -65,18 +65,20 @@ h1 a{
 }
 
 h2 {
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: calc(1.8vw + 12px);
     color: wheat;
     text-decoration: underline;
+    cursor: default;
 }
 
 h4 {
     color: whitesmoke;
     font-size: calc(2vw + 10px);
     line-height: calc(2vw + 10px);
-    font-family: 'Roboto', 'Arial', 'sans-serif';
+    font-family: 'Roboto', 'sans-serif';
     margin-top: 3vw;
+    cursor: default;
 }
 
 
@@ -89,15 +91,17 @@ h4 {
     text-align: center;
     margin-top: 3vw;
     width: 95%;
+    cursor: default;
 }
 
 .intro p {
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     color: whitesmoke;
     font-size: calc(1.6vw + 6px);
     line-height: calc(1.7vw + 8px);
     margin: 1vw 0px;
+    cursor: default;
 }
 
 
@@ -138,6 +142,7 @@ li {
     font-family: 'Roboto', 'Arial', 'sans-serif';
     list-style: none;
     line-height: normal;
+    cursor: default;
 }
 
 li img {
@@ -160,7 +165,7 @@ li img {
     right: 0;
     margin: 10px;
     font-size: 22px;
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color: rgb(29, 10, 10);
     background: url("../flag_images/envelope.png") no-repeat left top;
@@ -205,7 +210,7 @@ li img {
     background-size: cover;
     color: whitesmoke;
     cursor: pointer;
-    font-family: 'Josephin Slab', sans-serif;
+    font-family: 'Josephin Sans', sans-serif;
     font-weight: bold;
     transform: scale(1);
     box-shadow: 0px 6px 30px white;
@@ -215,6 +220,7 @@ li img {
 
 .ww h2 {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .ww:not(.world-highlighted):hover {
@@ -557,7 +563,7 @@ th h1 {
 }
 
 th, td {
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     color: whitesmoke;
     margin-bottom: 15px;
 }
@@ -580,12 +586,14 @@ td {
     word-wrap: normal;
     width: 50%;
     text-align: center;
+    cursor: default;
 }
 
 .battle-description {
     width: 80%;
     margin: 5% 10% 0 10%;
     font-size: 25px;
+    cursor: default;
 }
 
 /* -------------------------------------------------Feedback Page */
@@ -642,7 +650,7 @@ td {
     margin: 10px;
     padding-left: 10px;
     border-radius: 5px;
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     background: beige;
 }
@@ -656,7 +664,7 @@ td {
     border-radius: 6px;
     margin: 20px;
     padding: 10px;
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     background: beige;
 }
