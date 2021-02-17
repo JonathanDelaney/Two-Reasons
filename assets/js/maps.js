@@ -482,6 +482,10 @@ $(window).resize(function () {
             $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
             $(".key").css("margin-top", "-45vw");
             $(".map-button-container").css("margin-top", "-50vw");
+        } else if ($(window).width() > 1400 && $(window).width() < 2000) {
+            $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2850px" });
+            $(".key").css("margin-top", "-45vw");
+            $(".map-button-container").css("margin-top", "-50vw");
         } else if ($(window).width() > 700 && $(window).height() < 730) {
             $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3000px" });
             $(".key").css("margin-top", "0vw");
@@ -534,6 +538,10 @@ function battleInfoDiv(battleTitle, startDate) {
         $(".map-button-container").css("margin-top", "-50vw");
     } else if ($(window).width() > 2000) {
         $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 1400 && $(window).width() < 2000) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2850px" });
         $(".key").css("margin-top", "-45vw");
         $(".map-button-container").css("margin-top", "-50vw");
     } else if ($(window).width() > 700 && $(window).height() < 800) {
