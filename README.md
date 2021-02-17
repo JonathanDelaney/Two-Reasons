@@ -111,8 +111,8 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 ### Known Bug
 
-- The Reponsiveness of the page is determined by some JavaScript so if the viewport is changed midway through use of the webpage the responsiveness will be off. I tried to get around using JS in this way but with the height of the main page changing on click I couldn't think of another way around it.
-    - This is a note to anybody testing out the website to use the viewport you want to test from the outset.
+- The Reponsiveness of the page is determined by some JavaScript so when the viewport is changed midway through use of the webpage the responsiveness could be off as it has been in previous stages of testing. I have fixed this to the best of my testing abilities. No issues at present.
+    - This is a note to anybody testing out the website to use the viewport you want to test from the outset if you encounter responsiveness issues.
 
 ### User experience
 
@@ -197,7 +197,7 @@ I published the website by following the instructions below.
 ### Forking
 If someone wants to add to the project they can fork off the main branch by following the instructons below.
 1. Go to the GitHub website and log in.
-2. Locate the [Repository](https://github.com/JonathanDelaney/Funked-Up-Chicks) used for this project.
+2. Locate the [Repository](https://github.com/JonathanDelaney/Two-Reasons) used for this project.
 3. On the right-hand side of the Repository name, you'll see the 'Fork' button next to the 'Star' and 'Watch' buttons.
 4. This will create a copy in your personal repository.
 5. Once you've finished making changes you can locate the 'New Pull Request' button just above the file listing in the original repository.
@@ -205,7 +205,7 @@ If someone wants to add to the project they can fork off the main branch by foll
 ### Cloning 
 For someone looking to clone the repository they would follow the steps outlined below.
 1. Go to the GitHub website and log in.
-2. Locate the [Repository](https://github.com/JonathanDelaney/Funked-Up-Chicks) used for this project.
+2. Locate the [Repository](https://github.com/JonathanDelaney/Two-Reasons) used for this project.
 3. Under the Repository name locate 'Clone or Download' button in green.
 4. To clone the repository using HTTPS click the link under "Clone with HTTPS".
 5. Open your Terminal and go to a directory where you want the cloned directory to be copied in.
