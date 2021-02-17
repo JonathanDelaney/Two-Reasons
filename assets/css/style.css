@@ -689,7 +689,6 @@ td {
 
 /* ------------------------------------------------------------Responsivity */
 
-
 /* Large Screens */
 @media only screen and (min-width: 2000px) {
     .init-page-container {
@@ -718,7 +717,7 @@ td {
     }
 
     #overview {
-        bottom: -57%;
+        bottom: 0%;
     }
 
   .feedback-form {
@@ -731,6 +730,23 @@ td {
 
 
 }
+
+
+/* Extra Large Screens */
+@media only screen and (min-width: 2400px) {
+    .init-page-container {
+        min-height: 1250px;
+    }
+
+    .page-container {
+        min-height: 3100px;
+    }
+
+    #overview {
+        bottom: -15vh;
+    }
+}
+
 
 /* Medium Laptop Screens */
 @media only screen and (min-width: 1400px) and (max-width: 2000px) {
