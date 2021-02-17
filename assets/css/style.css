@@ -766,6 +766,7 @@ td {
 
     .page-container {
         height: 250vw;
+        max-height: 2000px;
     }
 
     .key {
