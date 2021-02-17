@@ -461,25 +461,42 @@ function setMarkers() {
 }
 
 
+///////////////// Responsiveness on viewport change if marker has been clicked already
+let respV = false;
+
 $(window).resize(function () {
-    if ($(window).height() > 800 && $(window).width() < 450) {
-        $(".page-container").css({ "height": "742vw", "max-height": "2534px" });
-        $(".key").css("margin-top", "-97vw");
-        $(".map-button-container").css("margin-top", "-133vw");
-    } else if ($(window).width() <= 700) {
-        $(".page-container").css({ "height": "742vw", "max-height": "2400px" });
-        $(".key").css("margin-top", "-45vw");
-        $(".map-button-container").css("margin-top", "-50vw");
-    } else if ($(window).width() > 2000) {
-        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
-        $(".key").css("margin-top", "-45vw");
-        $(".map-button-container").css("margin-top", "-50vw");
-    } else if ($(window).width() > 700) {
-        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2625px" });
-        $(".key").css("margin-top", "-45vw");
-        $(".map-button-container").css("margin-top", "-50vw");
-    } else {
-        $(".page-container").css("height", "calc(170vh + 1400px)");
+    if (respV == true) {
+        if ($(window).width() < 300) {
+            $(".page-container").css({ "height": "893vw", "max-height": "2500px" });
+            $(".key").css("margin-top", "-45vw");
+            $(".map-button-container").css("margin-top", "-50vw");
+        } else if ($(window).height() > 800 && $(window).width() < 450) {
+            $(".page-container").css({ "height": "742vw", "max-height": "2534px" });
+            $(".key").css("margin-top", "-97vw");
+            $(".map-button-container").css("margin-top", "-133vw");
+        } else if ($(window).width() <= 700) {
+            $(".page-container").css({ "height": "742vw", "max-height": "2400px" });
+            $(".key").css("margin-top", "-45vw");
+            $(".map-button-container").css("margin-top", "-50vw");
+        } else if ($(window).width() > 2000) {
+            $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
+            $(".key").css("margin-top", "-45vw");
+            $(".map-button-container").css("margin-top", "-50vw");
+        } else if ($(window).width() > 700 && $(window).height() < 730) {
+            $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3000px" });
+            $(".key").css("margin-top", "0vw");
+            $(".map-button-container").css("margin-top", "0vw");
+        } else if ($(window).width() > 700 && $(window).width() < 1025) {
+            $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3000px" });
+            $(".key").css("margin-top", "-145vw");
+            $(".map-button-container").css("margin-top", "-145vw");
+        } else if ($(window).width() > 700) {
+            $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2625px" });
+            $(".key").css("margin-top", "-45vw");
+            $(".map-button-container").css("margin-top", "-50vw");
+        } else {
+            $(".page-container").css("height", "calc(170vh + 1400px)");
+        }
     }
 });
 
@@ -487,6 +504,8 @@ $(window).resize(function () {
 //////////// Battle Info Box Creator
 
 function battleInfoDiv(battleTitle, startDate) {
+
+    respV = true;
 
     //////////// Extracting More Data from Relevant Object
     const endDate = wws.find(x => x.battle === battleTitle).endDate;
@@ -501,7 +520,11 @@ function battleInfoDiv(battleTitle, startDate) {
     let adverseR;
 
     //////////// Changing Screen Height Property Depending on Current Screen Layout
-    if ($(window).height() > 800 && $(window).width() < 450) {
+    if ($(window).width() < 300) {
+        $(".page-container").css({ "height": "893vw", "max-height": "2500px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).height() > 800 && $(window).width() < 450) {
         $(".page-container").css({ "height": "742vw", "max-height": "2534px" });
         $(".key").css("margin-top", "-97vw");
         $(".map-button-container").css("margin-top", "-133vw");
@@ -513,6 +536,14 @@ function battleInfoDiv(battleTitle, startDate) {
         $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
         $(".key").css("margin-top", "-45vw");
         $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 700 && $(window).height() < 800) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3000px" });
+        $(".key").css("margin-top", "0vw");
+        $(".map-button-container").css("margin-top", "0vw");
+    } else if ($(window).width() > 700 && $(window).width() < 1025) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3000px" });
+        $(".key").css("margin-top", "-145vw");
+        $(".map-button-container").css("margin-top", "-145vw");
     } else if ($(window).width() > 700) {
         $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2625px" });
         $(".key").css("margin-top", "-45vw");
