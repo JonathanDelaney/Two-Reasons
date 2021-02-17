@@ -885,7 +885,6 @@ td {
     width: 41.6px;
     height: 23.5px;
     font-size: 11px;
-    padding-top: 2px;
     margin: 10px 5px 0px 0px;
 }
 
@@ -985,6 +984,10 @@ td {
 
     .init-page-container {
         height: 130vh;
+    }
+
+    .contact-link {
+        margin: 55px 5px 0px 0px;
     }
 }
 
