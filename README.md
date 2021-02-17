@@ -102,8 +102,14 @@ I wanted to be as respectful as possible when presenting the website to the user
 - AdobeXd for the design of the mockups.
 - Vectr to edit images for free.
 - TnyJPG to compress images.
+- Googles Fonts
+- Git
+- GitHub
+- jQuery
 
 ## Testing
+
+### Known Bug
 
 - The Reponsiveness of the page is determined by some JavaScript so if the viewport is changed midway through use of the webpage the responsiveness will be off. I tried to get around using JS in this way but with the height of the main page changing on click I couldn't think of another way around it.
     - This is a note to anybody testing out the website to use the viewport you want to test from the outset.

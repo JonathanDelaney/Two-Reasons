@@ -943,6 +943,24 @@ td {
 }
 
 
+/* Small Phones */
+@media only screen and (max-width: 450px) and (min-height: 800px) {
+
+    .page-container {
+        height: 400vw;
+        max-height: 2492px;
+    }
+
+    .key {
+        margin-top: -130vw;
+    }
+
+    .map-button-container {
+        margin-top: -180vw;
+    }
+}
+
+
 /* Really Small Phones */
 @media only screen and (max-width: 370px) {
 

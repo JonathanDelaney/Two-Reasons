@@ -461,6 +461,28 @@ function setMarkers() {
 }
 
 
+$(window).resize(function () {
+    if ($(window).height() > 800 && $(window).width() < 450) {
+        $(".page-container").css({ "height": "742vw", "max-height": "2534px" });
+        $(".key").css("margin-top", "-97vw");
+        $(".map-button-container").css("margin-top", "-133vw");
+    } else if ($(window).width() <= 700) {
+        $(".page-container").css({ "height": "742vw", "max-height": "2400px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 2000) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 700) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2625px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else {
+        $(".page-container").css("height", "calc(170vh + 1400px)");
+    }
+});
+
 
 //////////// Battle Info Box Creator
 
@@ -479,8 +501,20 @@ function battleInfoDiv(battleTitle, startDate) {
     let adverseR;
 
     //////////// Changing Screen Height Property Depending on Current Screen Layout
-    if ($(".key").css('flex-wrap') == 'wrap') {
-        $(".page-container").css({"height": "742vw", "max-height": "2400px"});
+    if ($(window).height() > 800 && $(window).width() < 450) {
+        $(".page-container").css({ "height": "742vw", "max-height": "2534px" });
+        $(".key").css("margin-top", "-97vw");
+        $(".map-button-container").css("margin-top", "-133vw");
+    } else if ($(window).width() <= 700) {
+        $(".page-container").css({ "height": "742vw", "max-height": "2400px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 2000) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "3225px" });
+        $(".key").css("margin-top", "-45vw");
+        $(".map-button-container").css("margin-top", "-50vw");
+    } else if ($(window).width() > 700) {
+        $(".page-container").css({ "height": "calc(170vh + 1400px)", "max-height": "2625px" });
         $(".key").css("margin-top", "-45vw");
         $(".map-button-container").css("margin-top", "-50vw");
     } else {
