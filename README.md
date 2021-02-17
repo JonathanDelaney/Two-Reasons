@@ -168,7 +168,6 @@ The CSS validating was done using <a href="https://jigsaw.w3.org/css-validator/"
 The Html validating was done using <a href="https://en.rakko.tools/tools/58/">Rakko</a><br>
 <img src="./assets/flag_images/HTMLtest.png" /><br>
 
- - The Introduction - Pass
  - The Main Page - Pass
  - The Contact Page - Pass
 
