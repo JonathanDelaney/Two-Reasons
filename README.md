@@ -89,7 +89,7 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 -   HTML5
 -   CSS3
--   JavaScript + jQuery
+-   JavaScript
 
 ### APIs Used
 
@@ -111,7 +111,7 @@ I wanted to be as respectful as possible when presenting the website to the user
 
 ### Known Bug
 
-- The Reponsiveness of the page is determined by some JavaScript so when the viewport is changed midway through use of the webpage the responsiveness could be off as it has been in previous stages of testing. I have fixed this to the best of my testing abilities. No issues at present.
+- The Reponsiveness of the page is determined by some JavaScript so when the viewport is changed midway through use of the webpage the responsiveness has been off during previous stages of testing. I have fixed this to the best of my ability. No noticable issues at present.
     - This is a note to anybody testing out the website to use the viewport you want to test from the outset if you encounter responsiveness issues.
 
 ### User experience
