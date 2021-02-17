@@ -39,12 +39,12 @@ Collecting the data 'by hand' was a labour of love. I enjoyed researching the wa
 Originally I had just intended on doing a year by year of the whole century but having decided on the two wars, the resolution of my slider increments had to be on the order of days. The process of using (pre 1970) dates in milliseconds along with a slider proved a challenge but a rewarding one to overcome. The option to select weekly and monthly, and so on, increments also required some thought to implement correctly and having no working example to go off for any of this it proved to be a great project for learning the extent to which JavaScript could be used to toy around with data.
 <br>
 <br>
-I wanted to be as respectful as possible when presenting the website to the user as the events that I was looking to represent were horrific in nature and if not sensitively portrayed could offend the user and trivialise those events. In this endeavor I used the least glitsy animation and kept the aesthetics of the website quite muted and had enough for the user to be kept engaged. It being designed as a sortt of study tool lent itself to that sort of design also. The introduction I wrote reflected this, I thought it necessary to preface the presentation of such serious events with my clear intentions.
+I wanted to be as respectful as possible when presenting the website to the user as the events that I was looking to represent were horrific in nature and if not sensitively portrayed could offend the user and trivialise those events. In this endeavor I used the least glitsy animation and kept the aesthetics of the website quite muted but with just enough for the user to be kept engaged. It being designed as a sort of study tool lent itself to that sort of design. The introduction I wrote also reflected this, I thought it necessary to preface the presentation of such serious events with a statement of intent.
 
 ## Mockups
 
 - Having gone through a few different ideas for the project I just did very rough mockups, in case my idea would change again. It did. A lot.
-- You can see the dramatic difference between the two. I kept on adding features and things which turned the project into something a lot more complicated than i had planned at any point. When I added in the different increments there were buttons to along with them, a key when I thought of using custom images for the markers on the map, etc.
+- You can see the dramatic difference between the two. I kept on adding features and things which turned the project into something a lot more complicated than i had planned at any point. When I added in the different increments there were buttons to along with them, when I thought of using custom images for the markers on the map a key was required, etc.
 
 * ### Mobile
 
@@ -70,17 +70,17 @@ I wanted to be as respectful as possible when presenting the website to the user
     - The main page changed dramatically over the course of the creation of the website. I structured it simply giving the map center stage and other features built around it (literally and figuratively).
     - The Key and buttons above, and the battle information below gives the user the most intuitive and easiest to navigate layout. The most important feature in the center and the other parts either side. Reading down through the key, instructions and settings to reach the map which they would then begin to manipulate.
     - The slider I styled with the Aircraft as the thumb which I thought was suggestive of a plane flying over land. This has the appropriate dates above which should make its purpose obvious to the user.
-    - The responsiveness of the website allows the globes to switch from being either side of the key to being above the key but still either side of eachother. The rest of the content just becomes wider and more spaced out on smaller screen sizes and some content becomes hidden such as the daily and weekly buttons and the flags in the info box below. The daily and weekly increments are too small to engage with properly on smaller screens and the flags unnecessary and just a bit too much on smaller screens.
+    - The responsiveness of the website allows the globes to switch from being either side of the key to being above the key but still either side of eachother. The rest of the content just becomes proportionally wider and more spaced out on smaller screen sizes and some content becomes hidden such as the daily and weekly buttons and the flags in the info box below. The daily and weekly increments are too small to engage with properly on smaller screens and the flags unnecessary and just a bit too much on smaller screens.
     - When the user clicks on a marker on the map it auto scrolls down to the info box which has loaded the information about the war. This I determined to be a better method than having a visual indicator appear prompting the user to scroll down as the map I felt had enough clutter on and around it.
     - The Info table which appears below the map gives the necessary details of the battle; the start and end date, the allies and adversaries which fought in the battle, their corresponding flags on flagpoles either side and a brief description.
-    - The header in the table has a wikipedia globe above it which should be enough of an indicator to the user that if they click it or the heading it will lead the to a wikipedia page about that battle. Any further indicating of such, I felt, would be obtrusive.
-    - In the upper right corner of the page I placed the contact link. This is in the style of an envelope which is a strong visual cue for the user. It's position on the screen keeps it out of the way but yet easy to find if the user wants to.
+    - The header in the table has a wikipedia globe above it which should be enough of an indicator to the user that if they click it or the heading it will lead them to a wikipedia page about that battle. Any further indicating of such, I felt, would be obtrusive.
+    - In the upper right corner of the page I placed the contact link. This is in the style of an envelope which is a strong visual cue for the user. It's position on the screen keeps it out of the way but yet easy to find if the user wants.
 
 * ### The Contact Page
 
-    - I tried to keep this page simple as I wanted the least possible distractions to take away from their experience of the main page. This page weas for feedback and nothing more. The user would submit their feedback without distractions.
-    - The background I kept as the same throughout the website just changing the tone I blended with it. This helped keep uniformity throuhgout the website and a thread of familiarity for the user wherever they navigated to.
-    - If the feedback they gave successfuly, sent they would receive a thank you message on the page and a link to return home. If the feedback failed to send, an alert would pop up, the entry fields would clear and they would be asked to try again.
+    - I tried to keep this page simple as I wanted the least possible distractions to take away from their experience of the main page. This page is for feedback and nothing more. The user will submit their feedback without distractions.
+    - The background I kept as the same throughout the website just changing the tone I blended with it. This, along with the heading, helped keep uniformity throuhgout the website and a thread of familiarity for the user wherever they navigated.
+    - If the feedback they gave successfuly sent, they would receive a thank you message on the page and a link to return home. If the feedback failed to send, an alert would pop up, the entry fields would clear and they would be asked to try again.
 
 
 ## Technologies Used
@@ -119,14 +119,14 @@ I wanted to be as respectful as possible when presenting the website to the user
 - Friends and Family
 
     - I asked friends and family of all different ages and abilities to play around with the website and explore its features. No issues were found in the final round of testing. 
-    - Some issues were detected in this phase of testing. Responsiveness on other unusual screen sizes needed tweeking and some minor improvements made to the usability of the maps off the back of the feedback.
+    - Some issues were detected in this phase of testing. Responsiveness on other unusual screen sizes needed tweeking and some minor improvements made to the usability of the maps came off the back of that feedback.
 
 - The Lay Person
 
   - I want to be able to get an idea of what the wars were about, why they started and ended etc.
-    - The political events on the map give this user some information from the outset as to why/how the wars began and likewise finished if they travelled to the end.
+    - The political events on the map give this user some information from the outset as to why/how the wars began and likewise finished if they travel to the end.
   - I want to be able to navigate the site and map easily, to see the wars play out as I have no interest in a specific event.
-    - The Key and instructions give a good brief explanation of what to look out for on the map. The slider is brightly coloured and the dates above it givce the user all they need to get started manipulating it.
+    - The Key and instructions give a good brief explanation of what to look out for on the map. The slider is brightly coloured and the dates above it give the user all they need to get started manipulating it.
   - The website should intrigue me or at least make the content interesting to sift through.
     - The gentle animations on the interactive parts of the page should attract the eye of the user and keep them entertained by the activity they can create on the map.
 
@@ -136,7 +136,7 @@ I wanted to be as respectful as possible when presenting the website to the user
     - The fact the student can choose the interval/time period they'd like to search with means that they can get a very broad overview if they'd like or even just look at the whole war. And the sequence of events would be clear by using the slider.
   - I should be able to access the dates of events and some information about each.
     - The info box that opens below gives a secondary school level student almost all they would ever need to know about each battle. The flags add an extra learning aspect and memorisation tool.
-  - I want to be able to see all the types of battles that took place and where they took place.
+  - I want to be able to see all the types of battles that happended during the wars, and where and when they took place.
     - The map is an innovation on that front. With custom markers for each type of warfare and the slider allowing full control over the timeline, the user can see what types of battle were happening when, and where they were happening.
   - There is a specific event that I would like to learn more about and know what else was happening before, at the time and after.
     - The website is missing a search bar which is something I may come back to add in the future but as it stands if the user knows when an event took place they can go to that time period or if they know where it happended then they can look at the whole war and go to that location on the map. The info box would then allow them to research what was taking place around the period of that battle without navigating away from the page.
@@ -146,11 +146,11 @@ I wanted to be as respectful as possible when presenting the website to the user
   - I would like to get a fresh perspective on some events and look at them in context of what was happening around the world at the time.
     - The site offers people with very good knowledge of the wars a way to look at them from a different angle as this sort of tool has never been created. They can take a very broad look at the wars or look at the world as it was on a specific day and the battles which were taking place elsewhere.
   - I would like to be able to access in depth information about the battles easily.
-    - The wikipedia link in the info box allows the user to navigate awayt quickly if they would like to study a battle in more depth. The link will open up in a new tab so they can continue searching for other relevant battles to study as well. 
+    - The wikipedia link in the info box allows the user to navigate away quickly if they would like to study a battle in more depth. The link will open up in a new tab so they can continue searching for other relevant battles to study as well. 
   - I should be able to provide feedback to the site authors if there is something, of importance, inaccurate or missing.
-    - As a user educated on the wars they can offer feedback through the contact page and perhaps see changes they suggest be introduced. At least battles that have been missed altogether can be added in easily and the website can be constantly improved by feedback from academics.
+    - As a user educated on the wars they can offer feedback through the contact page and perhaps see changes they suggest be introduced. At least battles that have been missed altogether can be added in easily and the website can be constantly improved via feedback from academics, or lay people for that matter.
   - I could do with a tool to use alongside more academic material to be able to jump to a specific time and have an overview of the war, at that time, to broaden my perspective on an event I'm studying.
-    - The maps allow for the user to have a look around the world and at events contemporaneous to the one they're studying, the visual aspect of the tool allows them to go back and forth to see the run up and aftermath, all from a broad perspective.
+    - The maps allow for the user to have a look around the world and at events contemporaneous to the one they're studying, the visual aspect of the tool allows them to go back and forth to see the run up and aftermath very easily, and all from a broad perspective.
 
 
 ### Performance Testing
