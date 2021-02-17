@@ -23,6 +23,7 @@ html, body {
     overflow: visible;
     width: 100vw;
     height: 100vh;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -691,6 +692,10 @@ td {
 
 /* Large Screens */
 @media only screen and (min-width: 2000px) {
+    .init-page-container {
+        min-height: 1000px;
+    }
+
     .page-container {
         height: 3100px;
         max-height: 3400px;
@@ -728,13 +733,23 @@ td {
 }
 
 /* Medium Laptop Screens */
-@media only screen and (max-width: 2000px) {
+@media only screen and (min-width: 1400px) and (max-width: 2000px) {
+    .init-page-container {
+        min-height: 800px;
+    }
 
+    .page-container {
+        min-height: 2500px;
+    }
 }
 
 
 /* Small Laptop Screens */
 @media only screen and (max-width: 1024px) {
+    .init-page-container {
+        min-height: 800px;
+    }
+
     .page-container {
         height: 250vw;
     }
@@ -767,6 +782,7 @@ td {
 
     .init-page-container {
         height: 120vh;
+        min-height: 800px;
     }
 
     .page-container {
