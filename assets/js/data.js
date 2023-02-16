@@ -4548,7 +4548,7 @@ let wws = [
         startDate: "06/14/1939",
         endDate: "08/20/1939",
         allies: "United Kingdom",
-        adversaries: "Germany",
+        adversaries: "Empire of Japan",
         victor: "inconclusive",
         battleType: "Political",
         description: "The Tientsin incident (天津事件) was an international incident created by a blockade by the Imperial Japanese Army's Japanese Northern China Area Army of the British settlements in the north China treaty port of Tientsin (modern day Tianjin) in June 1939. Originating as a minor administrative dispute, it escalated into a major diplomatic incident."
